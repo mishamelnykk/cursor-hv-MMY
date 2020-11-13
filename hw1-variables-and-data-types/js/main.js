@@ -6,3 +6,7 @@ const cash = 500;
 
 const maxPriсeGoods = Math.max(flour, butter,cream);
 console.log(maxPriсeGoods);
+const minPriсeGoods = Math.min(flour, butter,cream);
+console.log(minPriсeGoods);
+const sumPriceGoods = flour + butter + cream;
+console.log(sumPriceGoods);
