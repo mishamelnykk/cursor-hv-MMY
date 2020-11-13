@@ -5,4 +5,4 @@ const cream = 123.965;
 const cash = 500;
 
 const maxPriсeGoods = Math.max(flour, butter,cream);
-console.log(maxPriсeGoods: maxPriсeGoods);
+console.log(maxPriсeGoods);
