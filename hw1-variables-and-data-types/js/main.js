@@ -12,9 +12,9 @@ const sumPriceGoods = flour + butter + cream;
 console.log(sumPriceGoods);
 const sumPriceGoodsRound = Math.floor(flour) + Math.floor(butter) + Math.floor(cream);
 console.log(sumPriceGoodsRound);
-const sumRoundHundred = Math.round(sumPriceGoods / 100) * 100;
+const sumRoundHundred = Math.ceil(sumPriceGoods / 100) * 100;
 console.log (sumRoundHundred);
-const sumForParity = (Math.floor(sumPriceGoods) % 2) === 0;
+const sumForParity = (Math.floor(sumPriceGoodsRound) % 2) === 0;
 console.log (sumForParity);
 const remainderCash = cash - sumPriceGoods;
 console.log (remainderCash);
@@ -40,7 +40,6 @@ console.log(`Максимальна ціна : ${maxPriсeGoods}
   Середнє значення цін з копійками : ${meanValueGoods} 
   Сума із випадковою знижкою з копійками : ${sumWithDiscount} 
   Чистий прибуток враховуючи знижку: ${netProfit}`);
-
 
 
 
