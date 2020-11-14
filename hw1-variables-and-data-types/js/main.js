@@ -22,7 +22,7 @@ const meanValueGoods = (sumPriceGoods / 3).toFixed(2);
 console.log(meanValueGoods);
 
 //more difficult
-const discount = Math.random().toFixed(2);
+const discount = (Math.random() * 0.50).toFixed(2); //знижка з максимальним діапазоном 50%
 console.log (discount);
 const sumWithDiscount = (sumPriceGoods - (sumPriceGoods * discount)).toFixed(2);
 console.log(sumWithDiscount);
