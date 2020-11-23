@@ -77,20 +77,20 @@ const getNameInFirstLatterUpper = function (name){
 
 
 
-// console.log( getMaxDigit(prompt('Введіть число')) );
-// console.log(getSalaryWithoutTax (+prompt('Введіть зарплату')));
-// console.log(getRandomIntegerNumber(
-//     prompt(`Введіть нижні дапазон рандомного числа`),
-//     prompt('Введіть верхній діапазон рандомного числа'))
-//     );
-// console.log( getNumberLetterInWord(prompt(`Введіть букву`), prompt(`Введіть слово`)) );
-// console.log(convertCurrency(prompt(`ВВедіть валюту UAH або $`)));
+console.log( getMaxDigit(prompt('Введіть число')) );
+console.log(getSalaryWithoutTax (+prompt('Введіть зарплату')));
+console.log(getRandomIntegerNumber(
+    prompt(`Введіть нижні дапазон рандомного числа`),
+    prompt('Введіть верхній діапазон рандомного числа'))
+    );
+console.log( getNumberLetterInWord(prompt(`Введіть букву`), prompt(`Введіть слово`)) );
+console.log(convertCurrency(prompt(`ВВедіть валюту UAH або $`)));
 
-    // const myLength = prompt(`Введіть довжину пароля або натисніть cancel для герерації позамовченню`);
-    // if (+myLength !== 0){
-    //     console.log( getRandomPassword(myLength));
-    // }else console.log(getRandomPassword());
+const myLength = prompt(`Введіть довжину пароля або натисніть cancel для герерації позамовченню`);
+    if (+myLength !== 0){
+        console.log( getRandomPassword(myLength));
+    }else console.log(getRandomPassword());
    
-    // console.log(getDegreeOfNumber(prompt(`ВВедіть число`), prompt(`введіть степінь числа`)));
-    // console.log(deleteLetters(prompt(`Введіть символ для видалення`), prompt(`Введіть речення`)));
-// console.log(getNameInFirstLatterUpper(prompt('введіть імя')));
+console.log(getDegreeOfNumber(prompt(`ВВедіть число`), prompt(`введіть степінь числа`)));
+console.log(deleteLetters(prompt(`Введіть символ для видалення`), prompt(`Введіть речення`)));
+console.log(getNameInFirstLatterUpper(prompt('введіть імя')));
