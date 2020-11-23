@@ -74,6 +74,10 @@ const getNameInFirstLatterUpper = function (name){
     const wordWithoutFirstLatter = name.substring(1).toLowerCase();
     return firstLatter + wordWithoutFirstLatter;
 }
+//10
+const isPalyndrom = function (sentence){
+    return sentence === sentence.replace(' ', '').split('').reverse().join('');
+}
 
 
 
@@ -94,3 +98,4 @@ const myLength = prompt(`Введіть довжину пароля або на�
 console.log(getDegreeOfNumber(prompt(`ВВедіть число`), prompt(`введіть степінь числа`)));
 console.log(deleteLetters(prompt(`Введіть символ для видалення`), prompt(`Введіть речення`)));
 console.log(getNameInFirstLatterUpper(prompt('введіть імя')));
+console.log(isPalyndrom(prompt(`ВВедіть речення, яке може бути паліндромом`)));
