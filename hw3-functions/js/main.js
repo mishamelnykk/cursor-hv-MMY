@@ -14,8 +14,7 @@ const getMaxDigit = function(number){
 }
 //4
 const getSalaryWithoutTax = function (salary){
-    const tax = 19.5;
-    return salary - (salary * tax / 100);
+    return salary - (salary * 19.5 / 100);
 }
 //5
 const getRandomIntegerNumber = function (minNumber, maxNumber){
@@ -23,7 +22,7 @@ const getRandomIntegerNumber = function (minNumber, maxNumber){
 }
 //6
 const getNumberLetterInWord = function (letter, word){
-    const arrLattersInWord = String(word).split('');
+    const arrLattersInWord = String(word).toLowerCase().split('');
     let countOfLatters = 0;
     for (let i = 0; i < arrLattersInWord.length; i++){
         if(arrLattersInWord [i] === letter){
@@ -70,13 +69,11 @@ const deleteLetters = function (letter, word){
 }
 //3
 const getNameInFirstLatterUpper = function (name){
-    const firstLatter = name.substring(0,1).toUpperCase();
-    const wordWithoutFirstLatter = name.substring(1).toLowerCase();
-    return firstLatter + wordWithoutFirstLatter;
+    return name.substring(0,1).toUpperCase() + name.substring(1).toLowerCase();
 }
 //10
 const isPalyndrom = function (sentence){
-    return sentence === sentence.replace(' ', '').split('').reverse().join('');
+    return sentence === sentence.toLowerCase().replace(' ', '').split('').reverse().join('');
 }
 
 
