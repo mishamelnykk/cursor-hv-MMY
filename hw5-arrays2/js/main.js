@@ -38,6 +38,15 @@ const countPositiveNumbers = function(...numbers){
 const getDividedByFive = function (...numbers){
     return numbers.filter((numb) => !(numb % 5));
 }
+//9
+const divideByThree = function(word){
+    const newString = word.toLowerCase().split(` `).join(``);
+    const arrStringbyThree =[];
+    for (let i = 0; i < newString.length; i += 3) {
+        arrStringbyThree.push(newString.substring(i, i + 3));
+    }
+    return arrStringbyThree;
+}
 
 console.log(getRandomArray(14, 2, 14));
 console.log(filterEvenNumbers(1, 2, 3, 4, 5));
@@ -45,3 +54,4 @@ console.log(getAverage(1, 2, 3, 4, 6, 8, 12.1));
 console.log(getMedian(1, 2, 3, 4, 4, 4, 5, 12));
 console.log(countPositiveNumbers(1, 0, -3, 2, 4, -5))
 console.log(getDividedByFive(5, 3, 44, 55));
+console.log(divideByThree(prompt('Введіть слово')));
