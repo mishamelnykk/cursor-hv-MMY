@@ -66,8 +66,6 @@ const getBestStudent = (students) => {
 const calculateWordLetters = (word) => {
 let result = {};
     word.split('').map((letter) => {
-    console.log(result)
-        // debugger;
     if (result[letter]) {
          result[letter]++;
       } else {
