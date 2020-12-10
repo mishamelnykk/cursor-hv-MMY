@@ -47,7 +47,7 @@ class BudgetStudent extends Student {
         super(university, course, fullName);
         this.money = 1400;
         // this.getScholarship();
-        setInterval(() => this.getScholarship(), 2000);
+        setInterval(() => this.getScholarship(), 30000);
         
     }
     getScholarship(){
@@ -56,7 +56,7 @@ class BudgetStudent extends Student {
         //         console.log(`Ви отримали ${this.money} грн. стипендії`) ;
         // }
         // }, 5000);
-        if(this.getAverageMark >= 3.0 && this.status){
+        if(this.getAverageMark >= 4.0 && this.status){
             console.log(`Ви отримали ${this.money} грн. стипендії`);
     }
 
