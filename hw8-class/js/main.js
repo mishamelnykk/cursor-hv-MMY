@@ -45,6 +45,9 @@ class BudgetStudent extends Student {
         super(university, course, fullName);
     }
     get getScholarship(){
+        if(this.getAverageMark >= 4.0 && this.status){
+            return `Ви отримали 1400 грн. стипендії`;
+        }
 
     }
 }
