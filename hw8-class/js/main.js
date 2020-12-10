@@ -32,9 +32,11 @@ class Student {
     }
     }
     dismiss(){
+        console.log(`Ви виключені з навчального закладу`);
         return this.status = false;
     }
     recover(){
+        console.log(`Ви поступили в навчальний заклад`);
         return this.status = true;
     }
 
@@ -43,22 +45,37 @@ class Student {
 class BudgetStudent extends Student {
     constructor(university, course, fullName){
         super(university, course, fullName);
+        this.money = 1400;
+        // this.getScholarship();
+        setInterval(() => this.getScholarship(), 2000);
+        
     }
-    get getScholarship(){
-        if(this.getAverageMark >= 4.0 && this.status){
-            return `Ви отримали 1400 грн. стипендії`;
-        }
+    getScholarship(){
+        // setInterval(() => {
+        //     if(this.getAverageMark >= 3.0 && this.status){
+        //         console.log(`Ви отримали ${this.money} грн. стипендії`) ;
+        // }
+        // }, 5000);
+        if(this.getAverageMark >= 3.0 && this.status){
+            console.log(`Ви отримали ${this.money} грн. стипендії`);
+    }
 
-    }
 }
+}
+    
 
 
 
 const misha = new Student(`НУЛП`, 1, `Михайло Мельник`);
-const bodia = new Student(`ЛНУ ім. І.Франка`, 5, `Voichyshyn Bogdan`)
+const bodia = new BudgetStudent(`ЛНУ ім. І.Франка`, 5, `Voichyshyn Bogdan`)
 console.log(misha)
 console.log(misha.getInfo());
 console.log(misha.getmarks);
 console.log(misha.getAverageMark)
 misha.dismiss();
 console.log(misha.getmarks)
+console.log(bodia)
+console.log(bodia.getAverageMark)
+
+
+
