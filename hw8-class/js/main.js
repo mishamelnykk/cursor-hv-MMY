@@ -12,17 +12,24 @@ class Student {
     }
     
     get getmarks(){
+        if(this.status){
         return this.marks;
+        }else {
+            return null;
+        }
     }
     set setmarks(mark){
-        this.marks.push(mark);
+        if(this.status) {
+            this.marks.push(mark)
+        };
     }
     get getAverageMark(){
+        if(this.status){
         const sumNumbers = this.marks.reduce((total, number) => {
             return total + number;
         }, 0);
-        // console.log(sumNumbers);
         return +(sumNumbers / this.marks.length).toFixed(2);
+    }
     }
     dismiss(){
         return this.status = false;
@@ -33,6 +40,15 @@ class Student {
 
 }
 
+class BudgetStudent extends Student {
+    constructor(university, course, fullName){
+        super(university, course, fullName);
+    }
+    get getScholarship(){
+
+    }
+}
+
 
 
 const misha = new Student(`НУЛП`, 1, `Михайло Мельник`);
@@ -41,3 +57,5 @@ console.log(misha)
 console.log(misha.getInfo());
 console.log(misha.getmarks);
 console.log(misha.getAverageMark)
+misha.dismiss();
+console.log(misha.getmarks)
