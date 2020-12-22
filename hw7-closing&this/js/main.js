@@ -17,6 +17,14 @@ const getMySalary = function() {
     // console.log(this)
     const taxes = +(this.tax * salary).toFixed(2);
     const profit = +(salary - taxes).toFixed(2);
+    let timerId = setInterval(function(){console.log(
+        {
+            salary,
+            taxes,
+            profit
+        }
+    )}, 10000);
+    setTimeout(() => { clearInterval(timerId); alert('stop'); }, 100000);
     return {
         salary,
         taxes,
@@ -30,5 +38,3 @@ console.log(getMyTaxes.call(ukraine, 40000));
 console.log(getMiddleTaxes.call(latvia));
 console.log(getTotalTaxes.call(litva));
 console.log(getMySalary.call(ukraine));
-let timerId = setInterval(function(){console.log(getMySalary.call(ukraine))}, 10000);
-setTimeout(() => { clearInterval(timerId); alert('stop'); }, 100000);
