@@ -32,12 +32,14 @@ class Student {
     }
     }
     dismiss(){
-        console.log(`Ви виключені з навчального закладу`);
-        return this.status = false;
+        let res = this.status? `Ви виключені з навчального закладу` : `Виключення не можливе так як Ви не навчаєтесь у навчальному закладі`;
+        this.status = false;
+        return res;
     }
     recover(){
-        console.log(`Ви поступили в навчальний заклад`);
-        return this.status = true;
+        let res = this.status? `Поновлення не можливе, так як Ви навчаєтесь у цьому закладі`:`Вас поновлено у навчанні`;
+        this.status = true;
+        return res;
     }
 
 }
@@ -46,20 +48,13 @@ class BudgetStudent extends Student {
     constructor(university, course, fullName){
         super(university, course, fullName);
         this.money = 1400;
-        // this.getScholarship();
         setInterval(() => this.getScholarship(), 30000);
         
     }
     getScholarship(){
-        // setInterval(() => {
-        //     if(this.getAverageMark >= 3.0 && this.status){
-        //         console.log(`Ви отримали ${this.money} грн. стипендії`) ;
-        // }
-        // }, 5000);
         if(this.getAverageMark >= 4.0 && this.status){
             console.log(`Ви отримали ${this.money} грн. стипендії`);
     }
-
 }
 }
     
@@ -72,8 +67,13 @@ console.log(misha)
 console.log(misha.getInfo());
 console.log(misha.getmarks);
 console.log(misha.getAverageMark)
-misha.dismiss();
+console.log(misha.recover());
+console.log(misha.dismiss());
+console.log(misha.dismiss());
+console.log(misha.recover());
+console.log(misha.recover());
 console.log(misha.getmarks)
+
 console.log(bodia)
 console.log(bodia.getAverageMark)
 
