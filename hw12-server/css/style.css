@@ -49,7 +49,7 @@ h1 {
      margin-bottom: 5px;
  }
  
- .res {
+ .result {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,7 +64,7 @@ h1 {
      margin-right: 10px;
      
  }
- .button {
+ .buttonNext {
     display: inline-block;
  }
  .footer {  
