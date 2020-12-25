@@ -15,6 +15,7 @@ axios.get(`https://swapi.dev/api/films/${numberOfFilms}/`)
 const makePersonBox = (res) => {
     const box = document.createElement("div");
     box.classList.add(`personBox`);
+
     const namePerson = document.createElement("div");
     namePerson.classList.add("namePerson");
     namePerson.innerHTML = res.data.name;
@@ -29,4 +30,16 @@ const makePersonBox = (res) => {
     gender.classList.add("genderPerson");
     gender.innerHTML = res.data.gender;
     box.append(gender);
+
+    result.append(box);
 }
+
+
+
+
+const nextPage = document.querySelector(".buttonNext");
+
+nextPage.addEventListener(
+    "click",
+    () => (window.location.href = "planets.html")
+  );
