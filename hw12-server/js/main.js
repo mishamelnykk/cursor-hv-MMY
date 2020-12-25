@@ -1,4 +1,4 @@
-// let persons = [];
+
 const result = document.querySelector(`.result`);
 const nextPage = document.querySelector(`.buttonNext`);
 const mainButton = document.querySelector(`.buttonMain`)
@@ -8,7 +8,6 @@ const showPersons = function() {
     axios.get(`https://swapi.dev/api/films/${numberOfFilms}/`)
         .then((res) => {
             let persons = res.data.characters;
-            console.log(persons)
             persons.forEach(e => {
                 axios.get(e)
                     .then((res) => {
@@ -53,5 +52,3 @@ nextPage.addEventListener(
     "click",
     () => (window.location.href = "planets.html")
   );
-//   axios.get(`https://swapi.dev/api/films/4/`)
-//         .then((res) => console.log(res));
