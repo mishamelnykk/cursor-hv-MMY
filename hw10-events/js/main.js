@@ -11,4 +11,11 @@
         })  
     } 
     document.addEventListener(`keydown`, surchKeyEv);
-    
+    keys.forEach((key) => key.addEventListener(`click`, function (e) {
+        key.classList.remove(`playing`);
+        key.classList.add(`playing`);
+        new Audio(
+            `src/${Math.floor(Math.random() * 6 + 1)}.mp3`
+        ).play();
+       
+    }));
