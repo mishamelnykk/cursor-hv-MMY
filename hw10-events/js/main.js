@@ -4,7 +4,10 @@
         if (singl !== '') {stopAudio(singl);}
         keys.forEach((key) =>{ 
             key.classList.remove(`playing`);
-            if (e.key.toUpperCase().charCodeAt() === +key.id){
+            // console.log(e.code)
+            // console.log(key.id)
+            if (e.code === key.id){
+            // if (e.key.toUpperCase().charCodeAt() === +key.id){
                 key.classList.add(`playing`);
                 singl = new Audio(
                     `src/${Math.floor(Math.random() * 6 + 1)}.mp3`);
